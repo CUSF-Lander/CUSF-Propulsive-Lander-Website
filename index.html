@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSF Propulsive Lander Team</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        // Configure Tailwind CSS
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'cusf-dark-blue': '#0a2e50',
+                        'cusf-light-blue': '#5db9e3',
+                        'cusf-orange': '#f37021', // Extracted from logo
+                        'cusf-gray': '#c0c0c0',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Small CSS tweaks */
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Gradient text for main heading */
+        .hero-title {
+            background: linear-gradient(to right, #ffffff, #5db9e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-cusf-dark-blue text-white selection:bg-cusf-light-blue selection:text-cusf-dark-blue">
+
+    <!-- Header -->
+    <header class="border-b border-white/10 sticky top-0 bg-cusf-dark-blue/80 backdrop-blur-md z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-white">
+                CUSF <span class="font-light text-cusf-light-blue">Lander Team</span>
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#about" class="hover:text-cusf-light-blue transition-colors">About</a>
+                <a href="#milestones" class="hover:text-cusf-light-blue transition-colors">Milestones</a>
+                <a href="#team" class="hover:text-cusf-light-blue transition-colors">Team</a>
+                <a href="https://www.cusf.co.uk/" target="_blank" class="hover:text-cusf-light-blue transition-colors">Main CUSF Site</a>
+            </div>
+            <div class="md:hidden">
+                <!-- Mobile Menu Button (optional) -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="about" class="py-24 md:py-32 text-center">
+            <div class="container mx-auto px-6">
+                <!-- Lander Team Logo -->
+                <img src="static/Lander Team Logo.png"
+                     alt="Propulsive Lander Team Logo"
+                     class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 rounded-full shadow-lg bg-white/10">
+
+                <h1 class="hero-title text-5xl md:text-7xl font-black mb-6">
+                    Propulsive Lander Team
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-cusf-gray leading-relaxed">
+                    Team of 30+ within CUSF founded in December 2024 to develop a reusable liquid fuelled hopper rocket that flies to 100m and lands propulsively to compete in the Collegiate Propulsive Lander Challenge (CPLC) against 20+ universities in the US, UK, Europe, Australia, and more.
+                </p>
+                <div class="mt-12">
+                    <a href="#milestones" class="bg-cusf-light-blue text-cusf-dark-blue font-bold py-3 px-8 rounded-lg text-lg hover:bg-white transition-all transform hover:scale-105 shadow-lg">
+                        See Our Milestones
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestones Section -->
+        <section id="milestones" class="py-20 bg-white/5">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16">
+                    Our <span class="text-cusf-light-blue">Milestones</span>
+                </h2>
+
+                <!-- Milestone 1: TVC Drone -->
+                <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                    <!-- Image -->
+                    <div class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-2xl">
+                        <!-- TVC Drone CAD Render -->
+                        <img src="static/TVC-Drone-CAD-2025-11-16 at 01.23.02.jpeg"
+                             alt="Mini-TVC Drone Render"
+                             class="w-full h-auto object-cover">
+                    </div>
+                    <!-- Text -->
+                    <div class="w-full md:w-1/2">
+                        <span class="inline-block bg-cusf-orange text-white text-sm font-bold px-4 py-1 rounded-full mb-3">In Progress</span>
+                        <h3 class="text-3xl font-bold mb-4">1. Mini-TVC Drone</h3>
+                        <p class="text-cusf-gray mb-6 leading-relaxed">
+                            Designing a Thrust Vector Controlled drone to test and demonstrate flight software and control systems. This is the first step towards building the complex guidance systems needed for a propulsive landing.
+                        </p>
+                        <h4 class="text-xl font-semibold mb-3">Sub-teams:</h4>
+                        <ul class="list-disc list-inside text-cusf-gray space-y-1">
+                            <li>Control Systems</li>
+                            <li>Software</li>
+                            <li>Electronics</li>
+                            <li>Mechanical</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Milestone 2: Rocket Engine -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
+                    <!-- Image Grid -->
+                    <div class="w-full md:w-1/2">
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Engine CAD Image 1 -->
+                            <img src="static/engine-2.png"
+                                 alt="Engine CAD Design"
+                                 class="rounded-lg shadow-lg object-cover w-full h-full">
+
+                            <!-- Engine CAD Image 2 -->
+                            <img src="static/engine-1-2.png"
+                                 alt="Engine Nozzle CAD"
+                                 class="rounded-lg shadow-lg object-cover w-full h-full">
+
+                            <!-- Engine CAD Image 3 -->
+                            <img src="static/engine-0-2.png"
+                                 alt="Engine Component CAD"
+                                 class="rounded-lg shadow-lg object-cover w-full h-full">
+
+                            <!-- Engine CAD Image 4 -->
+                            <img src="static/engine-1.png"
+                                 alt="Engine Cutaway CAD"
+                                 class="rounded-lg shadow-lg object-cover w-full h-full">
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="w-full md:w-1/2">
+                        <span class="inline-block bg-cusf-orange text-white text-sm font-bold px-4 py-1 rounded-full mb-3">In Progress</span>
+                        <h3 class="text-3xl font-bold mb-4">2. Throttlable Liquid-Fuelled Rocket Engine</h3>
+                        <p class="text-cusf-gray mb-6 leading-relaxed">
+                            X2 Propulsion Teams are in competition to design, build, and test a highly throttlable liquid fuelled rocket engine. This engine is the heart of the lander, allowing for the precise thrust control needed to hover and land.
+                        </p>
+                        <h4 class="text-xl font-semibold mb-3">Sub-teams:</h4>
+                        <ul class="list-disc list-inside text-cusf-gray space-y-1">
+                            <li>X2 Propulsion Teams (Chagatai & Adai)</li>
+                            <li>Feed Systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Milestone 3: Hopper -->
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <!-- Image -->
+                    <div class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-2xl">
+                        <!-- SpaceX Starhopper Reference Image -->
+                        <img src="static/SpaceX-Starhopper.jpg"
+                             alt="Hopper Prototype Reference - SpaceX Starhopper"
+                             class="w-full h-auto object-cover">
+                    </div>
+                    <!-- Text -->
+                    <div class="w-full md:w-1/2">
+                        <span class="inline-block bg-cusf-light-blue text-cusf-dark-blue text-sm font-bold px-4 py-1 rounded-full mb-3">From 2025-26</span>
+                        <h3 class="text-3xl font-bold mb-4">3. Hopper</h3>
+                        <p class="text-cusf-gray mb-6 leading-relaxed">
+                            The final goal: a liquid fuelled hopper rocket capable of flying to 100+ meters in altitude and hovering before returning and landing propulsively. This vehicle will be a small-scale version of SpaceX's early Grasshopper and Starhopper prototypes.
+                        </p>
+                        <h4 class="text-xl font-semibold mb-3">Target:</h4>
+                        <ul class="list-disc list-inside text-cusf-gray space-y-1">
+                            <li>10+ Total Flights</li>
+                            <li>Up to 60 seconds duration per flight</li>
+                            <li>Precise Return to Launch Site</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-center mb-8">
+                    Meet the <span class="text-cusf-light-blue">Team</span>
+                </h2>
+                <p class="text-lg text-cusf-gray max-w-2xl mx-auto mb-12">
+                    Our project is driven by a passionate and dedicated team of over 30 students from across the university, spanning all sub-teams.
+                </p>
+                <div class="w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <!-- Team Group Photo -->
+                    <img src="static/team-photo-IMG_8239 LQ JPG.jpg"
+                         alt="CUSF Lander Team Group Photo"
+                         class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black/20 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center text-cusf-gray">
+            <p class="text-sm">
+                &copy; 2025 Cambridge University Spaceflight (CUSF). All rights reserved.
+            </p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://www.instagram.com/cuspaceflight/" target="_blank" class="hover:text-cusf-light-blue transition-colors">
+                    Instagram
+                </a>
+                <a href="https://www.cusf.co.uk/" target="_blank" class="hover:text-cusf-light-blue transition-colors">
+                    Main Website
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
